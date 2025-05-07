@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(90deg, #eeeeee, #d65a31, #393e46, #222831);
+}
+.app {
+  padding: 2rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.todo {
+  min-height: 70%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.073); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Applies blur effect */
+  -webkit-backdrop-filter: blur(10px);
+}
+.heading {
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: space-between;
+  background: #eeeeee;
+  border-radius: 18px;
+  height: 8%;
+}
+.inputCat {
+  border: 0;
+  outline: none;
+  width: 70%;
+  background: transparent;
+  padding: 1rem 0rem;
+  padding-left: 15px;
+  font-size: 15px;
+}
+.btnCat {
+  width: 30%;
+  border: 0;
+  background: #8dc6ff;
+  border-radius: 18px;
+  font-size: 15px;
+  transition: background 0.4s ease-in-out, font-weight 0.4s ease-in-out;
+}
+
+
+.btnCat:hover{
+  background: #5eaeff;
+  font-weight: bold;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 1rem 1.5rem;
+  border-radius: 0.9rem;
+  margin-top: 1rem;
+}
+
+.catHeadDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catDel {
+  border: 0;
+  font-size: 0.8rem;
+  padding: 7px 15px;
+  background-color: #eeeeee;
+  border-radius: 0.8rem;
+}
+
+.catDel:hover{
+  background-color: #eeeeeebf;
+
+}
+.taskInputDiv {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 0.8rem;
+}
+
+.taskInput {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  width: 90%;
+  padding: 0.3rem 0.5rem;
+  font-size: 15px;
+}
+
+.taskInput::placeholder {
+  color: black;
+}
+
+.addTask {
+  width: 20%;
+  border: 0;
+  background: #eeeeee;
+  border-radius: 0.8rem;
+  font-size: 15px;
+}
+
+.addTask:hover{
+  background-color: #eeeeeebf;
+
+}
+
+.tasklist {
+  margin: 15px 0px 0px 25px;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.task span {
+  font-size: 1.5rem;
+}
+
+.taskDel {
+  border: 0;
+  font-size: 0.8rem;
+  padding: 7px 15px;
+  background-color: #eeeeee;
+  border-radius: 0.8rem;
+}
+
+.taskDel:hover{
+  background-color: #eeeeeebf;
+
+}
+
+.category, .task {
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.category.removed, .task.removed {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category, .task {
+  animation: fadeIn 0.4s ease-in-out;
+}
