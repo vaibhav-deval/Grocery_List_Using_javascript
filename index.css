@@ -15,7 +15,8 @@ body {
 }
 .todo {
   min-height: 70%;
-  width: 30%;
+  width: 90%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   padding: 50px;
@@ -26,6 +27,7 @@ body {
 .heading {
   color: aliceblue;
   margin-bottom: 20px;
+  font-size: 4vw;
 }
 
 .inputDiv {
@@ -53,8 +55,7 @@ body {
   transition: background 0.4s ease-in-out, font-weight 0.4s ease-in-out;
 }
 
-
-.btnCat:hover{
+.btnCat:hover {
   background: #5eaeff;
   font-weight: bold;
 }
@@ -87,9 +88,8 @@ body {
   border-radius: 0.8rem;
 }
 
-.catDel:hover{
+.catDel:hover {
   background-color: #eeeeeebf;
-
 }
 .taskInputDiv {
   margin-top: 10px;
@@ -120,9 +120,8 @@ body {
   font-size: 15px;
 }
 
-.addTask:hover{
+.addTask:hover {
   background-color: #eeeeeebf;
-
 }
 
 .tasklist {
@@ -135,7 +134,7 @@ body {
 }
 
 .task span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .taskDel {
@@ -146,17 +145,18 @@ body {
   border-radius: 0.8rem;
 }
 
-.taskDel:hover{
+.taskDel:hover {
   background-color: #eeeeeebf;
-
 }
 
-.category, .task {
+.category,
+.task {
   transition: all 0.4s ease-in-out;
   opacity: 1;
 }
 
-.category.removed, .task.removed {
+.category.removed,
+.task.removed {
   opacity: 0;
   transform: translateY(-20px);
 }
@@ -172,6 +172,22 @@ body {
   }
 }
 
-.category, .task {
+.category,
+.task {
   animation: fadeIn 0.4s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .todo {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .inputCat {
+    font-size: 14px;
+  }
+
+  .btnCat {
+    font-size: 14px;
+  }
 }
